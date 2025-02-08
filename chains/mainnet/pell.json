@@ -8,13 +8,13 @@
     "coin_type": "60",
     "min_tx_fee": "4000",
     "addr_prefix": "pell",
-    "logo": "./logos/pell.svg",
+    "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/pell.svg",
     "keplr_features": ["eth-address-gen", "eth-key-sign"],
     "assets": [{
         "base": "apell",
         "symbol": "PELL",
         "exponent": "18", 
         "coingecko_id": "",
-        "logo": "./logos/pell.svg"
+        "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/pell.svg"
     }]
 }
