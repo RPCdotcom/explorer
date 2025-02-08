@@ -32,7 +32,7 @@ const stakingStore = useStakingStore();
 const chainStore = useBlockchain();
 
 store.fetchProposal(props.proposal_id).then((res) => {
-  const proposalDetail = reactive(res.proposal);
+  let proposalDetail = reactive(res.proposal);
   // when status under the voting, final_tally_result are no data, should request fetchTally
   if (res.proposal?.status === 'PROPOSAL_STATUS_VOTING_PERIOD') {
     store.fetchTally(props.proposal_id).then((tallRes) => {
@@ -55,7 +55,7 @@ store.fetchProposal(props.proposal_id).then((res) => {
     })
   }
 
-  const msgType = proposalDetail.content['@type'] || '';
+  const msgType = proposalDetail.content?.['@type'] || '';
   if(msgType.endsWith('MsgUpdateParams')) {
     if(msgType.indexOf('staking') > -1) {
       chainStore.rpc.getStakingParams().then((res) => {
@@ -197,12 +197,16 @@ const processList = computed(() => {
 });
 
 function showValidatorName(voter: string) {
-  const { data } = fromBech32(voter);
-  const hex = toHex(data);
-  const v = stakingStore.validators.find(
-    (x) => toHex(fromBech32(x.operator_address).data) === hex
-  );
-  return v ? v.description.moniker : voter;
+  try {
+      const { data } = fromBech32(voter);
+      const hex = toHex(data);
+      const v = stakingStore.validators.find(
+        (x) => toHex(fromBech32(x.operator_address).data) === hex
+      );
+      return v ? v.description.moniker : voter;
+  } catch(e){
+      return voter;
+  }
 }
 
 function pageload(p: number) {
@@ -214,7 +218,12 @@ function pageload(p: number) {
 }
 
 function metaItem(metadata: string|undefined): { title: string; summary: string } {
-  return metadata ? JSON.parse(metadata) : {}
+  if (!metadata) {
+    return { title: '', summary: '' }
+  } else if (metadata.startsWith('{') && metadata.endsWith('}')) {
+    return JSON.parse(metadata)
+  }
+  return { title: metadata, summary: '' }
 }
 </script>
 
@@ -391,7 +400,7 @@ function metaItem(metadata: string|undefined): { title: string; summary: string 
             <tr v-for="(item, index) of votes" :key="index">
               <td class="py-2 text-sm">{{ showValidatorName(item.voter) }}</td>
               <td
-                v-if="item.option"
+                v-if="item.option && item.option !== 'VOTE_OPTION_UNSPECIFIED'"
                 class="py-2 text-sm"
                 :class="{
                   'text-yes': item.option === 'VOTE_OPTION_YES',
