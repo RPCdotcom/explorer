@@ -8,12 +8,12 @@
     "coin_type": "118",
     "min_tx_fee": "800",
     "addr_prefix": "atone",
-    "logo": "/logos/atomone.png",
+    "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/atomone.png?raw=true",
     "assets": [{
         "base": "uatone",
         "symbol": "ATONE",
         "exponent": "6",
         "coingecko_id": "",
-        "logo": "/logos/atomone.png"
+        "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/atomone.png?raw=true"
     }]
 }
