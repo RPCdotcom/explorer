@@ -1,8 +1,8 @@
 {
     "chain_name": "atomone-mainnet",
     "coingecko": "",
-    "api": ["https://atomone-mainnet-api.itrocket.net"],
-    "rpc": ["https://atomone-mainnet-rpc.itrocket.net"],
+    "api": ["https://atomone-mainnet-api.rpcdot.com", "https://atomone-mainnet-api.itrocket.net"],
+    "rpc": ["https://atomone-mainnet-rpc.rpcdot.com", "https://atomone-mainnet-rpc.itrocket.net"],
     "snapshot_provider": "",
     "sdk_version": "v0.47.13",
     "coin_type": "118",
