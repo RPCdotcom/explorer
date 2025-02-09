@@ -5,13 +5,13 @@
   "sdk_version": "0.50.3",
   "addr_prefix": "air",
   "min_tx_fee": "200",
-  "logo": "/logos/airchains.jpg",
+  "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/airchains.jpg?raw=true",
   "assets": [
     {
       "symbol": "AMF",
       "base": "amf",
       "exponent": 6,
-      "logo": "/logos/airchains.jpg"
+      "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/airchains.jpg?raw=true"
     }
   ]
 }
