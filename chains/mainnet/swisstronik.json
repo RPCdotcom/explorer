@@ -8,12 +8,12 @@
     "coin_type": "60",
     "min_tx_fee": "40000",
     "addr_prefix": "swtr",
-    "logo": "/logos/swisstronic.jpg",
+    "logo": "https://raw.githubusercontent.com/RPCdotcom/explorer/1ec434b2c05c24a0da3c090e4a6f32ac8b28df90/chains/mainnet/logos/swisstronik.svg",
     "assets": [{
         "base": "aswtr",
         "symbol": "SWTR",
         "exponent": "18", 
         "coingecko_id": "",
-        "logo": "/logos/swisstronic.jpg"
+        "logo": "https://raw.githubusercontent.com/RPCdotcom/explorer/1ec434b2c05c24a0da3c090e4a6f32ac8b28df90/chains/mainnet/logos/swisstronik.svg"
     }]
 }
