@@ -6,13 +6,13 @@
   "min_tx_fee": 200,
   "sdk_version": "0.47.4",
   "addr_prefix": "art",
-  "logo": "/logos/artela.jpg",
+  "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/artela.jpg?raw=true",
   "assets": [
     {
       "base": "uart",
       "symbol": "ART",
       "exponent": 18,
-      "logo": "/logos/artela.jpg"
+      "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/artela.jpg?raw=true"
     }
   ]
 }
