@@ -8,13 +8,13 @@
     "coin_type": "60",
     "min_tx_fee": "4000",
     "addr_prefix": "0g",
-    "logo": "/logos/og.jpg",
+    "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/0g.jpg?raw=true",
     "keplr_features": ["eth-address-gen", "eth-key-sign"],
     "assets": [{
         "base": "ua0gi",
         "symbol": "A0GI",
         "exponent": "6", 
         "coingecko_id": "",
-        "logo": "/logos/og.jpg"
+        "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/0g.jpg?raw=true"
     }]
 }
