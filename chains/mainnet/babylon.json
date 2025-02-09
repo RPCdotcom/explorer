@@ -8,12 +8,12 @@
     "coin_type": "118",
     "min_tx_fee": "800",
     "addr_prefix": "bbn",
-    "logo": "/logos/babylon.jpg",
+    "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/babylon.jpg?raw=true",
     "assets": [{
         "base": "ubbn",
         "symbol": "BBN",
         "exponent": "6",
         "coingecko_id": "",
-        "logo": "/logos/babylon.jpg"
+        "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/babylon.jpg?raw=true"
     }]
 }
