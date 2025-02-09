@@ -1,5 +1,5 @@
 {
-    "chain_name": "atomone",
+    "chain_name": "atomone-mainnet",
     "coingecko": "",
     "api": ["https://atomone-mainnet-api.itrocket.net"],
     "rpc": ["https://atomone-mainnet-rpc.itrocket.net"],
