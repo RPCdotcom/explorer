@@ -1,5 +1,5 @@
 {
-  "chain_name": "tellor",
+  "chain_name": "tellor-testnet",
   "api": ["https://tellor-testnet-api.itrocket.net"],
   "rpc": ["https://tellor-testnet-rpc.itrocket.net"],
   "coin_type": 118,
