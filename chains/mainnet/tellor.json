@@ -1,7 +1,7 @@
 {
   "chain_name": "tellor-testnet",
-  "api": ["https://tellor-testnet-api.itrocket.net"],
-  "rpc": ["https://tellor-testnet-rpc.itrocket.net"],
+  "api": ["https://tellor-testnet-rpc.rpcdot.com", "https://tellor-testnet-api.itrocket.net"],
+  "rpc": ["https://tellor-testnet-api.rpcdot.com", "https://tellor-testnet-rpc.itrocket.net"],
   "coin_type": 118,
   "min_tx_fee": 200,
   "sdk_version": "0.50.9",
