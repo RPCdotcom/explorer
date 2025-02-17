@@ -1,0 +1,18 @@
+{
+  "chain_name": "xrpl-testnet",
+  "api": ["https://xrpl-testnet-api.rpcdot.com"],
+  "rpc": ["https://xrpl-testnet-rpc.rpcdot.com"],
+  "coin_type": 118,
+  "min_tx_fee": 1000,
+  "sdk_version": "0.38.15",
+  "addr_prefix": "ethm",
+  "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/logo.png?raw=true",
+  "assets": [
+    {
+      "base": "axrp",
+      "symbol": "XRP",
+      "exponent": 18,
+      "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/logo.png?raw=true"
+    }
+  ]
+}
