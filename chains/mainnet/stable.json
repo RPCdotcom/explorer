@@ -5,7 +5,7 @@
   "coin_type": 118,
   "min_tx_fee": 200,
   "sdk_version": "v0.50.9-evmos-warden",
-  "addr_prefix": "warden",
+  "addr_prefix": "stable",
   "logo": "https://raw.githubusercontent.com/RPCdotcom/mediakit/refs/heads/main/1500x500cx.jpg",
   "assets": [
     {
