@@ -1,6 +1,6 @@
 {
   "chain_name": "republic-testnet",
-  "api": ["https://api.republicai.io"],
+  "api": ["https://rest.republicai.io"],
   "rpc": ["https://rpc.republicai.io"],
   "sdk_version": "v0.38.12",
   "addr_prefix": "arai",
