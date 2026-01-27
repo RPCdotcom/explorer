@@ -1,0 +1,17 @@
+{
+  "chain_name": "republic-testnet",
+  "api": ["https://api.republicai.io"],
+  "rpc": ["https://rpc.republicai.io"],
+  "sdk_version": "v0.38.12",
+  "addr_prefix": "arai",
+  "min_tx_fee": "0.025",
+  "logo": "https://raw.githubusercontent.com/RPCdotcom/explorer/refs/heads/master/chains/mainnet/logos/republic.jpg",
+  "assets": [
+    {
+      "symbol": "RAI",
+      "base": "arai",
+      "exponent": 18,
+      "logo": "https://raw.githubusercontent.com/RPCdotcom/explorer/refs/heads/master/chains/mainnet/logos/republic.jpg"
+    }
+  ]
+}
