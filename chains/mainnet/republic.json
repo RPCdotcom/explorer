@@ -1,6 +1,6 @@
 {
   "chain_name": "republic-testnet",
-  "api": ["https://republic-testnet-api.rpcdot.com", "https://api-t.republic.vinjan-inc.com"],
+  "api": ["https://api-t.republic.vinjan-inc.com", "https://republic-testnet-api.rpcdot.com"],
   "rpc": ["https://rpc.republicai.io"],
   "sdk_version": "v0.38.12",
   "addr_prefix": "rai",
