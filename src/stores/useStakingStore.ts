@@ -149,7 +149,7 @@ export const useStakingStore = defineStore('stakingStore', {
         vs.push(cons)
       }
     },
-    async fetchValidators(status: string, limit = 300) {
+    async fetchValidators(status: string, limit = 600) {
       return this.blockchain.rpc?.getStakingValidators(status, limit).then((res) => {
         const vals = res.validators.sort(
           (a, b) => Number(b.delegator_shares) - Number(a.delegator_shares)
