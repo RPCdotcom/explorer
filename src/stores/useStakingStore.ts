@@ -63,7 +63,7 @@ export const useStakingStore = defineStore('stakingStore', {
       }
     },
     async fetchAcitveValdiators() {
-      return this.fetchValidators('BOND_STATUS_BONDED', 500);
+      return this.fetchValidators('BOND_STATUS_BONDED', 600);
     },
     async fetchInacitveValdiators() {
       return this.fetchValidators('BOND_STATUS_UNBONDED');
