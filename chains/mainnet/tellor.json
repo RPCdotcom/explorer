@@ -1,0 +1,18 @@
+{
+  "chain_name": "tellor-testnet",
+  "api": ["https://tellor-testnet-api.rpcdot.com", "https://tellor-testnet-api.itrocket.net"],
+  "rpc": ["https://tellor-testnet-rpc.rpcdot.com", "https://tellor-testnet-rpc.itrocket.net"],
+  "coin_type": 118,
+  "min_tx_fee": 200,
+  "sdk_version": "0.50.9",
+  "addr_prefix": "tellor",
+  "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/tellor.png?raw=true",
+  "assets": [
+    {
+      "base": "loya",
+      "symbol": "Loya",
+      "exponent": 6,
+      "logo": "https://github.com/RPCdotcom/explorer/blob/master/chains/mainnet/logos/tellor.png?raw=true"
+    }
+  ]
+}
