@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════
+   ROOT — LIGHT MODE
+═══════════════════════════════════════════ */
+:root {
+  --bg-root:        #f5f4f0;
+  --bg-panel:       #faf9f7;
+  --bg-panel-alt:   #efefeb;
+  --border:         #1a1a1a;
+  --border-muted:   #d4d2cc;
+  --text-main:      #0d0d0d;
+  --text-secondary: #4a4a4a;
+  --text-muted:     #888880;
+  --accent:         #00c853;     /* terminal green */
+  --accent-dim:     #009940;
+  --accent-bg:      rgba(0,200,83,0.08);
+  --red:            #e53935;
+  --amber:          #f59e0b;
+  --nav-active-bg:  #0d0d0d;
+  --nav-active-fg:  #f5f4f0;
+  --shadow-card:    2px 2px 0px #1a1a1a;
+  --font-mono:      'JetBrains Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --font-sans:      'Space Grotesk', system-ui, sans-serif;
+}
+
+/* ═══════════════════════════════════════════
+   ROOT — DARK MODE
+═══════════════════════════════════════════ */
+html.dark, html[data-theme='dark'] {
+  --bg-root:        #0a0a0a;
+  --bg-panel:       #111111;
+  --bg-panel-alt:   #1a1a1a;
+  --border:         #333333;
+  --border-muted:   #222222;
+  --text-main:      #f0f0ec;
+  --text-secondary: #aaaaaa;
+  --text-muted:     #555555;
+  --accent:         #00e676;
+  --accent-dim:     #00c853;
+  --accent-bg:      rgba(0,230,118,0.07);
+  --red:            #ff5252;
+  --amber:          #ffab40;
+  --nav-active-bg:  #f0f0ec;
+  --nav-active-fg:  #0a0a0a;
+  --shadow-card:    2px 2px 0px #333333;
+  --font-mono:      'JetBrains Mono', 'Fira Code', monospace;
+  --font-sans:      'Space Grotesk', system-ui, sans-serif;
+}
+
+/* ═══════════════════════════════════════════
+   BASE
+═══════════════════════════════════════════ */
+html, body { height: 100%; }
+
+body {
+  background-color: var(--bg-root);
+  color: var(--text-main);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── All monospace elements ── */
+code, pre, .mono, .font-mono,
+.badge, .stat-val, table, th, td {
+  font-family: var(--font-mono) !important;
+}
+
+/* ═══════════════════════════════════════════
+   SCROLLBAR — thin, themed
+═══════════════════════════════════════════ */
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-muted);
+  border-radius: 0;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ═══════════════════════════════════════════
+   GLOBAL DOT-GRID BACKGROUND
+═══════════════════════════════════════════ */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image:
+    radial-gradient(circle, var(--border-muted) 1px, transparent 1px);
+  background-size: 24px 24px;
+  opacity: 0.35;
+}
+html.dark body::before { opacity: 0.18; }
+
+/* ═══════════════════════════════════════════
+   ASCII CARD UTILITY
+═══════════════════════════════════════════ */
+.ascii-card {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  border-radius: 0;
+  position: relative;
+}
+.ascii-card::before {
+  content: '┌──';
+  position: absolute;
+  top: -1px; left: -1px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--accent);
+  line-height: 1;
+  pointer-events: none;
+}
+
+/* ── Panel with left accent bar ── */
+.panel-accent {
+  border-left: 3px solid var(--accent);
+  padding-left: 1rem;
+}
+
+/* ═══════════════════════════════════════════
+   NAVIGATION ACTIVE
+═══════════════════════════════════════════ */
+.nav-active {
+  background: var(--nav-active-bg) !important;
+  color: var(--nav-active-fg) !important;
+  border-radius: 0 !important;
+}
+.nav-active * { color: var(--nav-active-fg) !important; }
+
+/* ═══════════════════════════════════════════
+   DAISYUI OVERRIDES — flatten + restyle
+═══════════════════════════════════════════ */
+.btn {
+  border-radius: 0 !important;
+  font-family: var(--font-mono) !important;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.btn-primary {
+  background: var(--accent) !important;
+  border-color: var(--accent) !important;
+  color: #0a0a0a !important;
+  box-shadow: 2px 2px 0 var(--accent-dim) !important;
+}
+.btn-primary:hover {
+  background: var(--accent-dim) !important;
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0 var(--accent-dim) !important;
+}
+
+.badge {
+  border-radius: 0 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 10px;
+}
+
+.input, .select, .textarea {
+  border-radius: 0 !important;
+  font-family: var(--font-mono) !important;
+  border-color: var(--border) !important;
+  background: var(--bg-panel) !important;
+}
+.input:focus, .select:focus { outline: 1px solid var(--accent) !important; }
+
+.table {
+  font-family: var(--font-mono) !important;
+  font-size: 12px;
+}
+.table th { border-bottom: 1px solid var(--border) !important; }
+.table th:first-child { position: relative; z-index: 2; }
+.table tr:hover td { background: var(--accent-bg) !important; }
+
+/* ═══════════════════════════════════════════
+   PAGE TRANSITION
+═══════════════════════════════════════════ */
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: opacity 0.18s ease, transform 0.18s ease;
+}
+.slide-up-enter-from { opacity: 0; transform: translateY(8px); }
+.slide-up-leave-to   { opacity: 0; transform: translateY(-4px); }
+
+/* ═══════════════════════════════════════════
+   DAISYUI BASE OVERRIDES
+═══════════════════════════════════════════ */
+.bg-base-100 {
+  background: var(--bg-panel) !important;
+  border: 1px solid var(--border-muted) !important;
+}
+
+/* ── Progress bar ── */
+.progress-info::-webkit-progress-value { background-color: var(--accent) !important; }
