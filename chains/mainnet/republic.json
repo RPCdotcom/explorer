@@ -1,7 +1,7 @@
 {
   "chain_name": "republic-testnet",
   "api": ["https://api-t.republic.vinjan-inc.com", "https://republic-testnet-api.rpcdot.com"],
-  "rpc": ["https://rpc.republicai.io"],
+  "rpc": ["https://republic-testnet-rpc.rpcdot.com"],
   "sdk_version": "v0.38.12",
   "addr_prefix": "rai",
   "min_tx_fee": "0.025",
